@@ -18,4 +18,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'Admin\HomeController@index');
+
+
+
+
+Route::get('admin/news', ['as'=> 'admin.news.index', 'uses' => 'Admin\NewsController@index']);
+Route::post('admin/news', ['as'=> 'admin.news.store', 'uses' => 'Admin\NewsController@store']);
+Route::get('admin/news/create', ['as'=> 'admin.news.create', 'uses' => 'Admin\NewsController@create']);
+Route::put('admin/news/{news}', ['as'=> 'admin.news.update', 'uses' => 'Admin\NewsController@update']);
+Route::patch('admin/news/{news}', ['as'=> 'admin.news.update', 'uses' => 'Admin\NewsController@update']);
+Route::delete('admin/news/{news}', ['as'=> 'admin.news.destroy', 'uses' => 'Admin\NewsController@destroy']);
+Route::get('admin/news/{news}', ['as'=> 'admin.news.show', 'uses' => 'Admin\NewsController@show']);
+Route::get('admin/news/{news}/edit', ['as'=> 'admin.news.edit', 'uses' => 'Admin\NewsController@edit']);

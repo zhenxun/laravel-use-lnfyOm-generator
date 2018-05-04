@@ -57,15 +57,15 @@ return [
 
         'model'             => 'App\Models',
 
-        'datatables'        => 'App\DataTables\Admin',
+        'datatables'        => 'App\DataTables',
 
-        'repository'        => 'App\Repositories\Admin',
+        'repository'        => 'App\Repositories',
 
-        'controller'        => 'App\Http\Controllers\Admin',
+        'controller'        => 'App\Http\Controllers',
 
         'api_controller'    => 'App\Http\Controllers\API',
 
-        'request'           => 'App\Http\Requests\Admin',
+        'request'           => 'App\Http\Requests',
 
         'api_request'       => 'App\Http\Requests\API',
     ],
@@ -144,7 +144,7 @@ return [
 
         'tests'         => true,
 
-        'datatables'    => true,
+        'datatables'    => false,
 
         'menu'          => [
 
