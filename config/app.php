@@ -165,7 +165,10 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
-        \InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class, 
+        \InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class,
+        
+        /*laravel-datatables*/
+        Yajra\DataTables\DataTablesServiceProvider::class,
 
     ],
 
@@ -218,6 +221,7 @@ return [
         'Form'      => Collective\Html\FormFacade::class, // aliases lnfyOm CRUD generator
         'Html'      => Collective\Html\HtmlFacade::class, // aliases lnfyOm CRUD generator
         'Flash'     => Laracasts\Flash\Flash::class, // aliases lnfyOm CRUD generator
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class, //laravel datatables
 
     ],
 
