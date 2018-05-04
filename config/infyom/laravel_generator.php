@@ -57,15 +57,15 @@ return [
 
         'model'             => 'App\Models',
 
-        'datatables'        => 'App\DataTables',
+        'datatables'        => 'App\DataTables\Admin',
 
-        'repository'        => 'App\Repositories',
+        'repository'        => 'App\Repositories\Admin',
 
-        'controller'        => 'App\Http\Controllers',
+        'controller'        => 'App\Http\Controllers\Admin',
 
         'api_controller'    => 'App\Http\Controllers\API',
 
-        'request'           => 'App\Http\Requests',
+        'request'           => 'App\Http\Requests\Admin',
 
         'api_request'       => 'App\Http\Requests\API',
     ],
@@ -108,7 +108,7 @@ return [
 
     'options' => [
 
-        'softDelete' => true,
+        'softDelete' => false,
 
         'tables_searchable_default' => false,
     ],
@@ -122,11 +122,11 @@ return [
 
     'prefixes' => [
 
-        'route' => '',  // using admin will create route('admin.?.index') type routes
+        'route' => 'admin',  // using admin will create route('admin.?.index') type routes
 
-        'path' => '',
+        'path' => 'admin',
 
-        'view' => '',  // using backend will create return view('backend.?.index') type the backend views directory
+        'view' => 'backend',  // using backend will create return view('backend.?.index') type the backend views directory
 
         'public' => '',
     ],
@@ -144,7 +144,7 @@ return [
 
         'tests'         => true,
 
-        'datatables'    => false,
+        'datatables'    => true,
 
         'menu'          => [
 
